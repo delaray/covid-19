@@ -34,7 +34,7 @@ def load_corona_data (file=INFECTED):
     df = pd.read_csv (file)
     original = ['Date', 'Country/Region', 'Province/State', 'Lat', 'Long',
                 'Confirmed', 'Recovered', 'Deaths']
-    new = ['date','country','province','lat','long','count','recovered','deaths']
+    new = ['date','country','province','lat','long','cases','recovered','deaths']
     columns = dict(zip(original, new))
     df = df.rename(columns=columns)
     return df
